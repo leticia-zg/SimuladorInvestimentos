@@ -48,31 +48,6 @@ O projeto utiliza uma arquitetura em camadas, com:
 ## 📋 Pré-requisitos
 - .NET SDK 6.0 ou superior
 - Banco de dados Oracle configurado
-  
----
-
-### ✅ Exemplo de Requisição e Resposta
-
-**Requisição:**
-
-```http
-POST /api/investimentos/calcular
-Content-Type: application/json
-
-{
-  "nome": "",
-  "valorInicial": 1000,
-  "prazoMeses": 6,
-  "taxaJurosMensal": 0.01
-}
-```
-
-Resposta esperada (HTTP 200 OK):
-```http
-{
-  "valorFinal": 1061.52
-}
-```
 
 ---
 
@@ -109,6 +84,31 @@ dotnet run --project SimuladorInvestimentos.API
 Após iniciar a aplicação, acesse no navegador:
 ```bash
 https://localhost:{porta}/swagger
+```
+
+---
+
+### ✅ Exemplo de Requisição e Resposta
+
+**Requisição:**
+
+```http
+POST /api/investimentos/calcular
+Content-Type: application/json
+
+{
+  "nome": "",
+  "valorInicial": 1000,
+  "prazoMeses": 6,
+  "taxaJurosMensal": 0.01
+}
+```
+
+Resposta esperada (HTTP 200 OK):
+```http
+{
+  "valorFinal": 1061.52
+}
 ```
 
 ---
