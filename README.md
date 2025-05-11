@@ -61,9 +61,10 @@ Content-Type: application/json
 }
 
 Resposta esperada (HTTP 200 OK):
+```http
 {
   "valorFinal": 1061.52
-}```
+}
 
 ## ⚙️ Como Rodar o Projeto
 
