@@ -53,12 +53,14 @@ O projeto utiliza uma arquitetura em camadas, com:
 POST /api/investimentos/calcular
 Content-Type: application/json
 
+```json
 {
   "nome": "",
   "valorInicial": 1000,
   "prazoMeses": 6,
   "taxaJurosMensal": 0.01
-} ```
+}
+```
 
 Resposta esperada (HTTP 200 OK):
 ```http
