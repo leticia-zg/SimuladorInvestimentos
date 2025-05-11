@@ -68,6 +68,8 @@ Resposta esperada (HTTP 200 OK):
 }
 ```
 
+---
+
 ## ⚙️ Como Rodar o Projeto
 
 ### 1. Clonar o Repositório
@@ -75,6 +77,7 @@ Resposta esperada (HTTP 200 OK):
 ```bash
 git clone https://github.com/seu-usuario/SimuladorInvestimentos.git
 cd SimuladorInvestimentos
+```
 
 ### 2. Configurar o Banco de Dados Oracle
 
@@ -84,6 +87,7 @@ Edite o arquivo `appsettings.json` do projeto `SimuladorInvestimentos.API` com a
 "ConnectionStrings": {
   "OracleConnection": "User Id=seu_usuario;Password=sua_senha;Data Source=//localhost:1521/XEPDB1;"
 }
+```
 
 ### 3. Aplicar Migrations e Iniciar a Aplicação
 
@@ -92,12 +96,16 @@ Execute os comandos abaixo no terminal para aplicar as migrations e iniciar o pr
 ```bash
 dotnet ef database update -p SimuladorInvestimentos.Data -s SimuladorInvestimentos.API
 dotnet run --project SimuladorInvestimentos.API
+```
 
 ### 4. Acessar a Documentação Swagger
 
 Após iniciar a aplicação, acesse no navegador:
 ```bash
 https://localhost:{porta}/swagger
+```
+
+---
 
 📌 Autor:
 [Letícia Zago de Souza] – www.linkedin.com/in/letícia-zago-de-souza
