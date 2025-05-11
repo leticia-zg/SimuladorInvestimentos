@@ -58,7 +58,7 @@ Content-Type: application/json
   "valorInicial": 1000,
   "prazoMeses": 6,
   "taxaJurosMensal": 0.01
-}
+} ```
 
 Resposta esperada (HTTP 200 OK):
 ```http
