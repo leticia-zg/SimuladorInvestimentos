@@ -53,7 +53,6 @@ O projeto utiliza uma arquitetura em camadas, com:
 POST /api/investimentos/calcular
 Content-Type: application/json
 
-```json
 {
   "nome": "",
   "valorInicial": 1000,
