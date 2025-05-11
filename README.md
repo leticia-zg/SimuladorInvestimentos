@@ -23,7 +23,7 @@ O projeto utiliza uma arquitetura em camadas, com:
 
 ## 🛠️ Tecnologias Utilizadas
 
-- [.NET 6+](https://dotnet.microsoft.com/)
+- .Net
 - C#
 - ASP.NET Core Web API
 - Entity Framework Core
@@ -35,9 +35,13 @@ O projeto utiliza uma arquitetura em camadas, com:
 
 ## 🔗 Endpoints da API
 
-| Método | Rota                              | Descrição                                  | Status HTTP Esperado         |
-|--------|-----------------------------------|--------------------------------------------|-------------------------------|
-| POST   | `/api/investimentos/calcular`     | Simula o rendimento de um investimento     | 200 OK / 400 Bad Request      |
+
+| Método | Rota                          | Descrição                                  | Status HTTP Esperado         |
+|--------|-------------------------------|--------------------------------------------|-------------------------------|
+| GET    | `/api/investimentos`          | Lista os tipos de investimentos            | 200 OK                        |
+| POST   | `/api/investimentos/simular`  | Simula rendimento com valor e prazo        | 201 Created / 400 Bad Request |
+| PUT    | `/api/investimentos/{id}`     | Atualiza informações do investimento       | 200 OK / 404 Not Found        |
+| DELETE | `/api/investimentos/{id}`     | Remove um tipo de investimento             | 204 No Content / 404 Not Found|
 
 ---
 
