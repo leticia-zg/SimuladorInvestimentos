@@ -66,6 +66,7 @@ Resposta esperada (HTTP 200 OK):
 {
   "valorFinal": 1061.52
 }
+```
 
 ## ⚙️ Como Rodar o Projeto
 
