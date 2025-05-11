@@ -45,6 +45,12 @@ O projeto utiliza uma arquitetura em camadas, com:
 
 ---
 
+## 📋 Pré-requisitos
+- .NET SDK 6.0 ou superior
+- Banco de dados Oracle configurado
+  
+---
+
 ### ✅ Exemplo de Requisição e Resposta
 
 **Requisição:**
