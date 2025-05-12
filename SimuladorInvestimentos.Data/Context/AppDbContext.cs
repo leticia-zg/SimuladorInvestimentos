@@ -14,7 +14,6 @@ namespace SimuladorInvestimentos.Data.Context
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configurações adicionais de mapeamento podem ser feitas aqui
             modelBuilder.Entity<Investimento>().ToTable("INVESTIMENTOS");
         }
     }

@@ -13,7 +13,7 @@ public class Investimento
     [Range(0.01, double.MaxValue, ErrorMessage = "O valor inicial deve ser maior que zero.")]
     public decimal ValorInicial { get; set; }
 
-    [Range(1, int.MaxValue, ErrorMessage = "O prazo deve ser de no mínimo 1 mês.")]
+    [Range(1, int.MaxValue, ErrorMessage = "O prazo deve ser de no mÃ­nimo 1 mÃªs.")]
     public int PrazoMeses { get; set; }
 
     [Range(0, 1, ErrorMessage = "A taxa de juros deve estar entre 0 e 1.")]

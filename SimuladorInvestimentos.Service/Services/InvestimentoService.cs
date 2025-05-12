@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-namespace SimuladorInvestimentos.Core.Services
+namespace SimuladorInvestimentos.Service.Services
 {
     public class InvestimentoService
     {

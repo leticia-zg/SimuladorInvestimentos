@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimuladorInvestimentos.Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimuladorInvestimentos.API", "SimuladorInvestimentos.API\SimuladorInvestimentos.API.csproj", "{B7E228A6-8188-4E9B-8451-9046AF6599A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimuladorInvestimentos.Service", "SimuladorInvestimentos.Service\SimuladorInvestimentos.Service.csproj", "{FB8A7A24-36DE-479C-99B5-2F3E8502052D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{B7E228A6-8188-4E9B-8451-9046AF6599A5}.Release|x64.Build.0 = Release|Any CPU
 		{B7E228A6-8188-4E9B-8451-9046AF6599A5}.Release|x86.ActiveCfg = Release|Any CPU
 		{B7E228A6-8188-4E9B-8451-9046AF6599A5}.Release|x86.Build.0 = Release|Any CPU
+		{FB8A7A24-36DE-479C-99B5-2F3E8502052D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB8A7A24-36DE-479C-99B5-2F3E8502052D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB8A7A24-36DE-479C-99B5-2F3E8502052D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FB8A7A24-36DE-479C-99B5-2F3E8502052D}.Debug|x64.Build.0 = Debug|Any CPU
+		{FB8A7A24-36DE-479C-99B5-2F3E8502052D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FB8A7A24-36DE-479C-99B5-2F3E8502052D}.Debug|x86.Build.0 = Debug|Any CPU
+		{FB8A7A24-36DE-479C-99B5-2F3E8502052D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB8A7A24-36DE-479C-99B5-2F3E8502052D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB8A7A24-36DE-479C-99B5-2F3E8502052D}.Release|x64.ActiveCfg = Release|Any CPU
+		{FB8A7A24-36DE-479C-99B5-2F3E8502052D}.Release|x64.Build.0 = Release|Any CPU
+		{FB8A7A24-36DE-479C-99B5-2F3E8502052D}.Release|x86.ActiveCfg = Release|Any CPU
+		{FB8A7A24-36DE-479C-99B5-2F3E8502052D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

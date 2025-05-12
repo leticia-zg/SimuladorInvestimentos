@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+  <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\SimuladorInvestimentos.Core\SimuladorInvestimentos.Core.csproj" />
     <ProjectReference Include="..\SimuladorInvestimentos.Data\SimuladorInvestimentos.Data.csproj" />
+    <ProjectReference Include="..\SimuladorInvestimentos.Service\SimuladorInvestimentos.Service.csproj" />
   </ItemGroup>
 
 </Project>

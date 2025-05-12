@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SimuladorInvestimentos.Core.Models;
-using SimuladorInvestimentos.Core.Services;
+using SimuladorInvestimentos.Service.Services;
 
 namespace SimuladorInvestimentos.API.Controllers
 {
@@ -21,7 +21,7 @@ namespace SimuladorInvestimentos.API.Controllers
         /// Retorna todos os investimentos cadastrados.
         /// </summary>
         /// <remarks>
-        /// Este endpoint retorna uma lista de todos os investimentos disponÌveis no sistema.
+        /// Este endpoint retorna uma lista de todos os investimentos dispon√≠veis no sistema.
         /// </remarks>
         /// <response code="200">Retorna a lista de investimentos cadastrados.</response>
         [HttpGet]
@@ -40,28 +40,28 @@ namespace SimuladorInvestimentos.API.Controllers
         /// Este endpoint cria um novo investimento com base nos dados fornecidos.
         /// </remarks>
         /// <response code="201">O investimento foi criado com sucesso.</response>
-        /// <response code="400">Os dados fornecidos s„o inv·lidos.</response>
+        /// <response code="400">Os dados fornecidos s√£o inv√°lidos.</response>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult Post([FromBody] Investimento investimento)
         {
             if (investimento == null || string.IsNullOrEmpty(investimento.Nome) || investimento.ValorInicial <= 0)
-                return BadRequest("Dados inv·lidos para criaÁ„o do investimento.");
+                return BadRequest("Dados inv√°lidos para cria√ß√£o do investimento.");
 
             var novoInvestimento = _service.Criar(investimento);
             return CreatedAtAction(nameof(GetById), new { id = novoInvestimento.Id }, novoInvestimento);
         }
 
         /// <summary>
-        /// Retorna um investimento especÌfico pelo ID.
+        /// Retorna um investimento espec√≠fico pelo ID.
         /// </summary>
         /// <param name="id">ID do investimento a ser consultado.</param>
         /// <remarks>
-        /// Este endpoint retorna os dados de um investimento especÌfico com base no ID fornecido.
+        /// Este endpoint retorna os dados de um investimento espec√≠fico com base no ID fornecido.
         /// </remarks>
         /// <response code="200">Retorna os dados do investimento.</response>
-        /// <response code="404">O investimento com o ID fornecido n„o foi encontrado.</response>
+        /// <response code="404">O investimento com o ID fornecido n√£o foi encontrado.</response>
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -83,8 +83,8 @@ namespace SimuladorInvestimentos.API.Controllers
         /// Este endpoint atualiza os dados de um investimento existente com base no ID fornecido.
         /// </remarks>
         /// <response code="200">O investimento foi atualizado com sucesso.</response>
-        /// <response code="400">Os dados fornecidos s„o inv·lidos.</response>
-        /// <response code="404">O investimento com o ID fornecido n„o foi encontrado.</response>
+        /// <response code="400">Os dados fornecidos s√£o inv√°lidos.</response>
+        /// <response code="404">O investimento com o ID fornecido n√£o foi encontrado.</response>
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -92,7 +92,7 @@ namespace SimuladorInvestimentos.API.Controllers
         public IActionResult Put(int id, [FromBody] Investimento investimento)
         {
             if (investimento == null || id <= 0 || investimento.Id != id)
-                return BadRequest("Dados inv·lidos para atualizaÁ„o.");
+                return BadRequest("Dados inv√°lidos para atualiza√ß√£o.");
 
             var atualizado = _service.Atualizar(id, investimento);
             if (!atualizado)
@@ -109,8 +109,8 @@ namespace SimuladorInvestimentos.API.Controllers
         /// Este endpoint remove um investimento existente com base no ID fornecido.
         /// </remarks>
         /// <response code="204">O investimento foi removido com sucesso.</response>
-        /// <response code="400">O ID fornecido È inv·lido.</response>
-        /// <response code="404">O investimento com o ID fornecido n„o foi encontrado.</response>
+        /// <response code="400">O ID fornecido √© inv√°lido.</response>
+        /// <response code="404">O investimento com o ID fornecido n√£o foi encontrado.</response>
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -118,7 +118,7 @@ namespace SimuladorInvestimentos.API.Controllers
         public IActionResult Delete(int id)
         {
             if (id <= 0)
-                return BadRequest("Id inv·lido.");
+                return BadRequest("Id inv√°lido.");
 
             var removido = _service.Remover(id);
             if (!removido)

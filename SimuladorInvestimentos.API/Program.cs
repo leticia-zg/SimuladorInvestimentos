@@ -2,12 +2,14 @@ using SimuladorInvestimentos.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
+using SimuladorInvestimentos.Service.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configurar o AppDbContext com Oracle
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseOracle(builder.Configuration.GetConnectionString("OracleConnection")));
+
+builder.Services.AddScoped<InvestimentoService>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -20,12 +22,11 @@ builder.Services.AddSwaggerGen(c =>
         Description = "API para simular rendimentos de investimentos.",
         Contact = new OpenApiContact
         {
-            Name = "Letícia Zago de Souza",
-            Url = new Uri("https://www.linkedin.com/in/letícia-zago-de-souza")
+            Name = "LetÃ­cia Zago de Souza",
+            Url = new Uri("https://www.linkedin.com/in/letÃ­cia-zago-de-souza")
         }
     });
 
-    // Inclui os comentários XML
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     c.IncludeXmlComments(xmlPath);
@@ -33,7 +34,6 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// Ativa o Swagger se estiver em ambiente de desenvolvimento
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
