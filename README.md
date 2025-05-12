@@ -56,7 +56,7 @@ O projeto utiliza uma arquitetura em camadas, com:
 ### 1. Clonar o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/SimuladorInvestimentos.git
+git clone https://github.com/leticia-zg/SimuladorInvestimentos.git
 cd SimuladorInvestimentos
 ```
 
